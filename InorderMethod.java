@@ -48,13 +48,11 @@ public class InorderMethod
         tree.root.left.left = new Node(4); 
         tree.root.left.right = new Node(5); 
   
-        System.out.println("Preorder traversal of binary tree is "); 
-        tree.printPreorder(); 
+        
   
         System.out.println("\nInorder traversal of binary tree is "); 
         tree.printInorder(); 
   
-        System.out.println("\nPostorder traversal of binary tree is "); 
-        tree.printPostorder(); 
+       
     } 
 } 
