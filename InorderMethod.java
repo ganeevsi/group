@@ -38,6 +38,24 @@ public class InorderMethod
      {     
          printInorder(root);  
      }
+ void printPostorder(Node node) 
+    { 
+        if (node == null) 
+            return; 
+  
+        // first recur on left subtree 
+        printPostorder(node.left); 
+  
+        // then recur on right subtree 
+        printPostorder(node.right); 
+  
+        // now deal with the node 
+        System.out.print(node.key + " "); 
+    } 
+  void printPostorder()  
+{     
+printPostorder(root); 
+ }
 
      public static void main(String[] args) 
     { 
@@ -52,6 +70,8 @@ public class InorderMethod
   
         System.out.println("\nInorder traversal of binary tree is "); 
         tree.printInorder(); 
+   System.out.println("\nPostorder traversal of binary tree is "); 
+        tree.printPostorder(); 
   
        
     } 
