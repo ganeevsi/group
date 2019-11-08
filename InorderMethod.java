@@ -56,6 +56,24 @@ public class InorderMethod
 {     
 printPostorder(root); 
  }
+ void printPreorder(struct Node* node) 
+{ 
+    if (node == NULL) 
+        return; 
+  
+    /* first print data of node */
+    cout << node->data << " "; 
+  
+    /* then recur on left sutree */
+    printPreorder(node->left);  
+  
+    /* now recur on right subtree */
+    printPreorder(node->right); 
+}  
+void printPreorder()  
+{     
+printPreorder(root); 
+ }
 
      public static void main(String[] args) 
     { 
@@ -72,6 +90,8 @@ printPostorder(root);
         tree.printInorder(); 
    System.out.println("\nPostorder traversal of binary tree is "); 
         tree.printPostorder(); 
+        System.out.println("\nPreorder traversal of binary tree is "); 
+        tree.printPreorder(); 
   
        
     } 
